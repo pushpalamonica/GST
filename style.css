@@ -1,0 +1,346 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+ }
+ .body{
+    background-color: black;
+ }
+.header{
+    width:100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content:space-between; 
+    padding: 10px 30px; 
+    gap:10px;
+}
+.header img{
+    width:40px;
+    height: 40px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+}
+.headerlogo{
+    width:50%;
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.headerlogo h1{
+    color: white;
+}
+.navlinks{
+    width:50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.navlinks a{
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+button{
+    padding: 5px 5px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: olivedrab;
+    border: 2px solid black; 
+    border-radius: 8px;  
+}
+.hamburger{
+    display: none;
+}
+@media(max-width:1150px) {
+    
+    .navlinks{
+        position: absolute;
+        z-index: 999999;
+        right: 0;
+        top:10vh;
+        width: 100%;
+        height: 90vh;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        transform:translateX(-100%);
+        transition: all 0.5s ease-in;
+    }
+
+    .nav-active{
+        transform:translateX(0);
+
+    }
+    
+    .hamburger{
+        display:block;
+        width: 50%; 
+        display: flex;
+        align-items:flex-end;
+        justify-content: flex-end;
+        flex-direction: column;
+        cursor: pointer;
+
+    }  
+    .hamburger .line1,.line2,.line3{
+        background-color: white;
+        height: 8px;
+        width: 50px; 
+        margin:4px;  
+    }
+
+    .toggle .line1{
+        transform: rotate(-45deg) translate(-12px ,10px);
+    }
+    .toggle .line2{
+        opacity: 0;
+    }
+    .toggle .line3{
+        transform: rotate(45deg) translate(-12px, -10px);
+    }
+    
+       
+}
+.section{
+    height:90vh;
+    background-image:url("./images/restaurant.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+    background-size: cover;
+}
+.menu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: 90px 0px;
+}
+.menu-items{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    gap: 30px;
+}
+.menu1{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+}
+.menu h1{
+    color: olivedrab;
+    font-weight:bold ;
+    font-size: 45px;
+}
+.menu1 h2{
+    color: olivedrab;
+    font-size: 30px;
+}
+.menu1 ul{
+    color: white;
+    font-size: 20px;
+}
+@media(max-width:900px){
+    .menu{
+        flex-wrap: wrap;
+   
+    }
+}
+@media(max-width:650px){
+    .menu-items{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+   
+}
+.main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    padding: 90px 0px;
+}
+.main h1{
+    color: olivedrab;
+    font-weight:bold ;
+    font-size: 40px;
+}
+.customer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid olivedrab;
+    border-radius: 15px;
+    padding: 60px 40px;
+}
+.ordered{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    border: 1px solid olivedrab;
+    border-radius: 15px;
+    padding: 60px 40px;
+}
+.input-main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px; 
+    
+}
+.input-fields{
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content:flex-start;
+    flex-direction: column;
+    gap: 7px;
+
+}
+.input-fields label{
+    font-size: 20px;
+    font-weight: bold;
+    color: olivedrab;
+}
+.input-fields input{
+    padding: 4px 15px;
+    width: 250px;
+    border: 2px solid olivedrab;
+    border-radius: 8px;
+
+    
+}
+@media(max-width:900px){
+    .main{
+        flex-wrap: wrap;
+        gap:50px;
+    }
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 20px;
+}
+.button button{
+    padding: 10px 15px;
+    color:black;
+    background-color: olivedrab;
+    font-size: 20px;
+    cursor: pointer;
+    border: 3px solid olive;
+    border-radius: 8px;
+}
+.invoice-main{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 0px;
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid olivedrab;
+    border-radius: 15px;
+    padding: 30px 70px;
+
+}
+
+.invoice h1{
+    color: olivedrab;
+    font-size: 35px;
+    text-align: center;
+}
+
+.invoice h2{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.invoice2 h1{
+    color: olivedrab;
+    font-size: 35px;
+    text-align: center;
+}
+
+.invoice2 h2{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+.footer{
+    width:100%;
+    display:flex ;
+    align-items: center;
+    justify-content: space-around;
+    padding: 100px 0px;
+}
+.foot h1{
+    color:olivedrab;
+    font-size: 30px;
+}
+.foot p{
+    color: white;
+    font-size: 20px;
+}
+.last{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.last p{
+    font-size: 20px;
+    color: olivedrab;
+}
+@media(max-width:900px){
+    .footer{
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    .last{
+        flex-wrap: wrap;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GST Project</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="body">
+    <div class="header">
+      <div class="logo">
+        <img src="./images/dish.png" alt="" />
+        <div class="headerlogo">
+          <h1>ROSA</h1>
+        </div>
+      </div>
+      <div class="navlinks">
+        <a href="">Home</a>
+        <a href="">Reservations</a>
+        <a href="">Menu</a>
+        <a href="">Blog</a>
+        <a href="">Features</a>
+        <a href="">Shop</a>
+        <a href="">contact</a>
+        <button>Login</button>
+      </div>
+
+      <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </div>
+
+    <div class="section">
+      <img src="" alt="" />
+    </div>
+    <div class="menu">
+      <h1>MENU</h1>
+      <div class="menu-items">
+        <div class="menu1">
+          <h2>Veg Starters</h2>
+          <ul type="disc">
+            <li>Paneer Tikka</li>
+            <li>Paneer Chilly</li>
+            <li>Crispy Corn</li>
+            <li>Mixed Veg</li>
+            <li>Mushroom Chilly</li>
+            <li>Baby Corn</li>
+          </ul>
+          <h2>NonVeg Starter</h2>
+          <ul type="disc">
+            <li>Chicken Tikka</li>
+            <li>Chilly Chicken</li>
+            <li>Crispy Fish</li>
+            <li>Prawns Fry</li>
+            <li>Mutton Chilly</li>
+            <li>Apollo Fish</li>
+          </ul>
+        </div>
+        <div class="menu1">
+          <h2>Veg Biriyani</h2>
+          <ul type="disc">
+            <li>Paneer Biriyani</li>
+            <li>Paneer Chilly Biriyani</li>
+            <li>Masala Biriyani</li>
+            <li>Veg Biriyani</li>
+            <li>Mushroom Biriyani</li>
+            <li>Egg Biriyani</li>
+          </ul>
+          <h2>NonVeg Biriyani</h2>
+          <ul type="disc">
+            <li>Chicken Biriyani</li>
+            <li>Chilly Chicken Biriyani</li>
+            <li>Fish Biriyani</li>
+            <li>Prawns Biriyani</li>
+            <li>Mutton Biriyani</li>
+            <li>Kalyani Biriyani</li>
+          </ul>
+        </div>
+        <div class="menu1">
+          <h2>Naans</h2>
+          <ul type="disc">
+            <li>Butter Naan</li>
+            <li>Afghani Naan</li>
+            <li>Plain Naan</li>
+            <li>Garlic Naan</li>
+            <li>Tandoori Naan</li>
+            <li>Paneer Naan</li>
+          </ul>
+          <h2>Curries</h2>
+          <ul type="disc">
+            <li>Paneer Curry</li>
+            <li>Mutton Curry</li>
+            <li>Chicken Curry</li>
+            <li>Fish Curry</li>
+            <li>Prawns Curry</li>
+            <li>Egg Curry</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="customer">
+        <h1>CUSTOMER DETAILS</h1>
+        <div class="input-main">
+          <div class="input-fields">
+            <label for="">UserName</label>
+            <input type="text" id="UserName" placeholder="Enter your name" />
+          </div>
+
+          <div class="input-fields">
+            <label for="">UserAddress</label>
+            <input
+              type="text"
+              id="UserAddress"
+              placeholder="Enter your address"
+            />
+          </div>
+
+          <div class="input-fields">
+            <label for="">UserMobile</label>
+            <input
+              type="number"
+              id="UserMobile"
+              placeholder="Enter your mobile number"
+            />
+          </div>
+
+          <div class="input-fields">
+            <label for="">UserEmail</label>
+            <input type="text" id="UserEmail" placeholder="Enter your email" />
+          </div>
+        </div>
+      </div>
+      <div class="ordered">
+        <h1>ORDERED ITEMS</h1>
+        <div class="input-main">
+          <div class="input-fields">
+            <label for="">MuttonBiriyani</label>
+            <input
+              type="number"
+              value="0"
+              id="MuttonBiriyani"
+              placeholder="Enter the amount"
+            />
+          </div>
+
+          <div class="input-fields">
+            <label for="">ChillyMushroom</label>
+            <input
+              type="number"
+              value="0"
+              id="ChillyMushroom"
+              placeholder="Enter the amount"
+            />
+          </div>
+
+          <div class="input-fields">
+            <label for="">GarlicGheeNaan</label>
+            <input
+              type="number"
+              value="0"
+              id="GarlicGheeNaan"
+              placeholder="Enter the amount"
+            />
+          </div>
+
+          <div class="input-fields">
+            <label for="">MixedVegCurry</label>
+            <input
+              type="number"
+              value="0"
+              id="MixedVegCurry"
+              placeholder="Enter the amount"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="button">
+      <button onclick="calculate()">Payment</button>
+    </div>
+    <div class="invoice-main">
+      <div class="parent">
+        <div class="invoice">
+          <h1>Invoice Details</h1>
+          <h2 id="User"></h2>
+          <h2 id="Address"></h2>
+          <h2 id="Mobile"></h2>
+          <h2 id="Email"></h2>
+        </div>
+        <div class="invoice2">
+          <h1 style="color: olivedrab">Items:-Amount</h1>
+          <h2 id="Biriyani"></h2>
+          <h2 id="Mushroom"></h2>
+          <h2 id="Naan"></h2>
+          <h2 id="Vegcurry"></h2>
+          <h2 id="total"></h2>
+          <h2 id="gst"></h2>
+          <h2 id="tip"></h2>
+          <h2 id="totalamount"></h2>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="foot">
+        <h1>Location</h1>
+        <br />
+        <p>
+          12-23-145/A Banjara Hills<br />
+          Near south india shoping mall
+        </p>
+      </div>
+      <div class="foot">
+        <h1>Working Hours</h1>
+        <br />
+        <p>
+          Monday - Thursday - Friday<br />
+          Saturday - Sunday
+        </p>
+      </div>
+      <div class="foot">
+        <h1>Contact Us</h1>
+        <br />
+        <p>webrosyfoods976@gmail.com</p>
+      </div>
+    </div>
+    <div class="last">
+      <p>"Copyright @ 2023 Rosy Foods WebDev | Provided by Rosyfoods WebDev"</p>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
